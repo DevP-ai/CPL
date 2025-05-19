@@ -1,4 +1,4 @@
-package com.`in`.cpl.ui.theme
+package com.`in`.cpl.foundation.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
