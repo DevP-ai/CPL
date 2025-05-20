@@ -40,7 +40,7 @@ sealed class Destination {
 
 enum class BottomNavigation(val label: String, val icon: ImageVector, val route: Destination){
     HOME(label = "Home", icon = Icons.Filled.Home, route = Destination.HomeScreen),
-    SEARCH(label = "Ranking", icon = Icons.Filled.KeyboardArrowUp, route = Destination.RankingScreen),
+    RANKING(label = "Ranking", icon = Icons.Filled.KeyboardArrowUp, route = Destination.RankingScreen),
     ACHIEVEMENT(label = "Achievement", icon = Icons.Filled.Star, route = Destination.AchievementScreen),
     PROFILE(label = "Profile", icon = Icons.Filled.AccountCircle, route = Destination.ProfileScreen)
 }

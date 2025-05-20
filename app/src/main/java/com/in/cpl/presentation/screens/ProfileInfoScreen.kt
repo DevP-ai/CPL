@@ -2,12 +2,13 @@ package com.`in`.cpl.presentation.screens
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.navigation.NavController
 
 @Composable
-fun LoginScreen(
+fun ProfileInfoScreen(
     modifier: Modifier = Modifier,
-    onLoginSuccess: () -> Unit = {},
-    onCreateAccountClick: () -> Unit = {}
+    userId: String,
+    navController: NavController
 ) {
 
 }
