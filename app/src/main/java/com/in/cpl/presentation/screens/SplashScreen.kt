@@ -3,6 +3,7 @@ package com.`in`.cpl.presentation.screens
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.size
@@ -15,10 +16,13 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.scale
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.core.splashscreen.SplashScreen
 import com.`in`.cpl.R
+import com.`in`.cpl.foundation.theme.darkMaroon
+import com.`in`.cpl.foundation.theme.deepAubergine
 import kotlinx.coroutines.delay
 
 @Composable
@@ -26,6 +30,13 @@ fun SplashScreen(
     modifier: Modifier = Modifier,
     onSplashFinished: () -> Unit
 ) {
+    val gradientBrush = Brush.verticalGradient(
+        colors = listOf(
+            darkMaroon,
+            deepAubergine
+        )
+    )
+
     var startAnimation by remember { mutableStateOf(false) }
 
     val scale by animateFloatAsState(
@@ -41,7 +52,9 @@ fun SplashScreen(
     }
 
     Box(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier
+            .fillMaxSize()
+            .background(brush = gradientBrush),
         contentAlignment = Alignment.Center
     ){
         Image(
